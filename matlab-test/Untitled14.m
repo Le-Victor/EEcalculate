@@ -1,0 +1,9 @@
+extmpc = extcase14
+mpc.version = '2';
+mpc.baseMVA = extmpc.baseMVA;
+mpc.bus=extmpc.bus(:,1:13);
+mpc.gen=extmpc.gen(:,1:21);
+mpc.branch=extmpc.branch(:,1:13);
+mpc.gencost=extmpc.gencost(:,1:6);
+mpc.gen(:,2:5)=mpc.gen(:,2:5)*extmpc.baseMVA;
+mpc.gen(:,9:10)=mpc.gen(:,9:10)*extmpc.baseMVA;
